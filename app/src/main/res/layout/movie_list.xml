@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="190dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingStart="136dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="18dp"
+        android:elevation="8dp"
+        android:background="@drawable/card_bg">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/boldText"
+            android:fontFamily="@font/product_sans_bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="18sp"
+            android:hint="The Rising of Shield Hero"/>
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Male"
+            android:layout_marginTop="6dp"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="?attr/boldText"
+            android:fontFamily="@font/product_sans_bold"/>
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_below="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="24 January 2024"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:textColor="?attr/regularText"
+            android:fontFamily="@font/product_sans_regular"/>
+
+        <TextView
+            android:id="@+id/lang"
+            android:layout_below="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:hint="En"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:textColor="?attr/regularText"
+            android:fontFamily="@font/product_sans_regular"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_below="@+id/releaseDate"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/material_blue"
+            android:progressTint="@color/material_blue"
+            android:rating="4.5"
+            android:secondaryProgressTint="@color/material_blue"
+            android:stepSize="0.1"/>
+
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_below="@+id/releaseDate"
+            android:layout_toEndOf="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="4dp"
+            android:hint="4.5"
+            android:fontFamily="@font/product_sans_bold"
+            android:textSize="14sp"
+            android:textColor="?attr/boldText"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/posterViewModel"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="-160dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic"
+                android:contentDescription="@string/poster"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
